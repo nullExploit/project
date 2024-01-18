@@ -7,7 +7,9 @@ Rails.application.routes.draw do
   get '/postingan' => 'postingan#index'
   get '/postingan/detail/:id' => 'postingan#detail'
   get '/postingan/input' => 'postingan#input'
+  get '/postingan/edit/:id' => 'postingan#edit'
   post '/postingan/create' => 'postingan#create'
+  post '/postingan/update/:id' => 'postingan#update'
   get '/' => 'home#index'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

@@ -1,13 +1,14 @@
 <div class="main post-new">
     <div class="container">
-        <%= form_tag("/postingan/create") do %>
+        <h1>Edit Data</h1>
+        <%= form_tag("/postingan/update/#{@array.id}") do %>
             <div class="form">
                 <div class="form-body">
                     <label>Judul</label>
-                    <input name="judul" required>
+                    <input name="judul" value="<%= @array.judul %>" required>
 
                     <label>Deskripsi</label>
-                    <textarea name="deskripsi" required></textarea>
+                    <textarea name="deskripsi" required><%= @array.deskripsi %></textarea>
 
                     <button type="submit">Simpan</button>
                     <a href="/postingan">Kembali</a>

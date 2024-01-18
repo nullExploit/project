@@ -16,7 +16,20 @@ class PostinganController < ApplicationController
     @array.save
 
     flash[:pesan] = "Data Berhasil Disimpan!"
+    redirect_to("/postingan")
+  end
 
+  def edit
+    @array = Postingan.find_by(id: params[:id])
+  end
+
+  def update
+    @array = Postingan.find_by(id: params[:id])
+    @array.judul = params[:judul]
+    @array.deskripsi = params[:deskripsi]
+    @array.save
+
+    flash[:pesan] = "Data Berhasil Disimpan!"
     redirect_to("/postingan")
   end
 end
