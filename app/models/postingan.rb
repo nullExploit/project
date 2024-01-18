@@ -1,0 +1,3 @@
+class Postingan < ApplicationRecord
+
+    end
