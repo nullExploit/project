@@ -32,4 +32,12 @@ class PostinganController < ApplicationController
     flash[:pesan] = "Data Berhasil Disimpan!"
     redirect_to("/postingan")
   end
+
+  def delete
+    @array = Postingan.find_by(id: params[:id])
+    @array.destroy
+
+    flash[:pesan] = "Data Berhasil Dihapus!"
+    redirect_to("/postingan")
+  end
 end
